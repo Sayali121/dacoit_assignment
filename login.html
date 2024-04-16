@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dacoid Assignment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href= 
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
+          rel="stylesheet"> 
+
+<style>
+    input[type=text], input[type=email], input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+input[type=submit] {
+  width: 100%;
+  background : linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.logo{
+    border-radius:2px;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <div class="container mx-auto">
+    
+    <div class="container">
+        <h2 class="text-2xl"><b>Welcome Back</b></h2>
+        
+    </div>
+    <div class="container">
+       
+            <form action="goals.html">
+             
+              
+
+              <input type="email" id="email" name="email" placeholder="Email">
+
+              <div class="mb-4 relative">
+               
+                <div class="flex items-center">
+                    <input type="password" id="password"
+                           placeholder="Password"
+                           required name="password"
+                           class="mt-1 p-2 w-full border rounded-md pr-10">
+                    <button type="button" id="togglePassword"
+                            class="focus:outline-none -ml-8">
+                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20240227164304/visible.png"
+                             alt="" class="w-4">
+                    </button>
+                </div>
+            </div>
+                <a href="#" style="color:grey" class="underline">Forget your password?</a>
+            
+              <input type="submit" value="Create an Account" style="margin-top:150px;">
+            </form>
+
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-400"></div>
+                <span class="flex-shrink mx-4 text-gray-400">Or</span>
+                <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+
+            <div class="container text-center">
+                <span class="inline-grid grid-cols-2 gap-10">
+                    <span class="border-2 rounded-lg border-grey p-1"><img title="google-logo"  src= "images/google.png"></span>
+                    <span class="border-2 rounded-lg border-grey p-1 "><img title="facebook-logo"  src= "images/facebook.png"  style="margin:auto"></span> 
+                  </span>
+               
+            </div>
+            <div class="container text-center mt-3">
+                Don't have an account yet? <a href="register.html" style="color:blue;"> Create an account</a>
+            </div>
+          
+    </div>
+  </div>
+    
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const passIn = document.getElementById('password');
+    const btn = document.getElementById('togglePassword');
+    btn.addEventListener('click', function () {
+        const type =
+            passIn.getAttribute('type') ===
+                'password' ? 'text' : 'password';
+        passIn.setAttribute('type', type);
+    });
+   
+});
+    </script>
+
+</body>
+</html>
